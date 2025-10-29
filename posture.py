@@ -44,6 +44,12 @@ def main():
     """
     # Start capturing video from the webcam
     cap = cv2.VideoCapture(0)
+
+    # Setting frame width 
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+    
+    # Setting frame height
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
     
     if not cap.isOpened():
         print("Error: Could not open webcam.")
